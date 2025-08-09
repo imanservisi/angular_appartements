@@ -35,4 +35,16 @@ export class ResidencesComponent implements OnInit {
         }
       );
   }
+
+  supprimerResidence(res: Residence)
+  {
+    let conf = confirm('Etes-vous sûr de vouloir supprimer cette résidence ?');
+    if (conf) {
+      this.residenceService.supprimerResidence(res.id).subscribe(
+        () => {
+          this.chargerResidences();
+        }
+      );
+    }
+  }
 }

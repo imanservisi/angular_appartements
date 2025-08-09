@@ -19,14 +19,15 @@
             </tr>
         </thead>
         <tbody>
-            @for (residence of residences; track residence.idResidence) {
+            @for (residence of residences; track residence.id) {
             <tr>
                 <td>{{ residence.nomResidence }}</td>
                 <td class="text-center">{{ residence.adresse }}</td>
                 <td class="text-center">
                     <!-- <a data-toggle="tooltip" data-placement="top" title="voir la résidence" type="button" class="btn btn-info" href="{{ path('app_residence_show', {'id': residence.id}) }}"><i class="fa-solid fa-eye"></i></a> -->
                     <!-- <a data-toggle="tooltip" data-placement="top" title="modifier la résidence" type="button" class="btn btn-success" href="{{ path('app_residence_edit', {'id': residence.id}) }}"><i class="fa-solid fa-pen-to-square"></i></a> -->
-                    <!-- <span data-toggle="tooltip" data-placement="top" title="supprimer la résidence" type="button" class="btn btn-danger delete" data-id="{{ residence.id }}"><i class="fa-solid fa-trash"></i></span> -->
+                    <!-- <span data-toggle="tooltip" data-placement="top" title="supprimer la résidence" type="button" class="btn btn-danger delete" (click)="supprimerResidence(residence)"><i class="fa-solid fa-trash"></i></span> -->
+                    <button type="button" class="btn btn-danger" (click)="supprimerResidence(residence)">Supprimer</button>
                 </td>
             </tr>
             }

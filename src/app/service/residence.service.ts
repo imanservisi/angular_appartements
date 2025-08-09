@@ -26,4 +26,11 @@ export class ResidenceService {
   {
     return this.http.post<Residence>(environment.apiURL, res, httpOptions);
   }
+
+  supprimerResidence(id: number)
+  {
+    const url = `${environment.apiURL}/${id}`;
+
+    return this.http.delete(url);
+  }
 }
