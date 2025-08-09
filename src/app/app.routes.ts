@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
-import { ResidencesComponent } from './residences/residences.component';
-import { AddResidenceComponent } from './add-residence/add-residence.component';
-import { UpdateResidenceComponent } from './update-residence/update-residence.component';
-import { ShowResidenceComponent } from './show-residence/show-residence.component';
+import { ResidencesComponent } from './residences/index-residences/residences.component';
+import { AddResidenceComponent } from './residences/add-residence/add-residence.component';
+import { UpdateResidenceComponent } from './residences/update-residence/update-residence.component';
+import { ShowResidenceComponent } from './residences/show-residence/show-residence.component';
 
 export const routes: Routes = [
     {path: "residences", component: ResidencesComponent},

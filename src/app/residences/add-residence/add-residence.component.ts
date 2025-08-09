@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Residence } from '../model/residence.model';
-import { ResidenceService } from '../service/residence.service';
+import { Residence } from '../../model/residence.model';
+import { ResidenceService } from '../../service/residence.service';
 import { Router } from '@angular/router';
 
 @Component({

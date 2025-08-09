@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Residence } from '../model/residence.model';
+import { Residence } from '../../model/residence.model';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ResidenceService } from '../service/residence.service';
+import { ResidenceService } from '../../service/residence.service';
 
 @Component({
   selector: 'app-update-residence',
