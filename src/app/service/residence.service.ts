@@ -21,4 +21,9 @@ export class ResidenceService {
   {
     return this.http.get<Residence[]>(environment.apiURL);
   }
+
+  ajouterResidence(res: Residence): Observable<Residence>
+  {
+    return this.http.post<Residence>(environment.apiURL, res, httpOptions);
+  }
 }

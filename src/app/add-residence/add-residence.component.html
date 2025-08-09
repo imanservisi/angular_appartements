@@ -1,1 +1,26 @@
-<p>add-residence works!</p>
+<div class="container">
+    <div>
+        <h2>Ajouter une Résidence :</h2>
+    </div>
+    <form>
+        <div hidden class="col-sm-2 col-md-2 col-lg-2">
+            <label>ID Résidence</label>
+            <input type="text" [(ngModel)]="newResidence.idResidence" name="idResidence"
+                class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Nom Résidence</label>
+            <input type="text" [(ngModel)]="newResidence.nomResidence" name="nomResidence"
+                class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Adresse</label>
+            <input type="text"
+                [(ngModel)]="newResidence.adresse" name="adresse" class="form-control">
+        </div>
+    
+        <div class="mt-2">
+            <button type="submit" (click)="addResidence()" class="btn btn-success">Ajouter</button>
+        </div>
+    </form>
+</div>

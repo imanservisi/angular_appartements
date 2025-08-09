@@ -15,13 +15,20 @@ export class ResidencesComponent implements OnInit {
 
   residences: Residence[] = [];
 
-  constructor(private residenceService: ResidenceService) {}
+  message: string = '';
 
-  ngOnInit(): void {
-      this.chargerRésidences();
+  constructor(private residenceService: ResidenceService) {
+    const nav = window.history.state;
+    if (nav && nav.message) {
+      this.message = nav.message;
+    }
   }
 
-  chargerRésidences() {
+  ngOnInit(): void {
+      this.chargerResidences();
+  }
+
+  chargerResidences() {
     this.residenceService.listeResidences().subscribe(
         (res) => {
           this.residences = res;
