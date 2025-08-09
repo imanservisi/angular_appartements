@@ -31,6 +31,18 @@ export class ResidenceService {
   {
     const url = `${environment.apiURL}/${id}`;
 
-    return this.http.delete(url);
+    return this.http.delete(url, httpOptions);
+  }
+
+  consulterResidence(id: number): Observable<Residence>
+  {
+    const url = `${environment.apiURL}/${id}`;
+
+    return this.http.get<Residence>(url);
+  }
+
+  modifierResidence(res: Residence):Observable<Residence>
+  {
+    return this.http.put<Residence>(environment.apiURL, res, httpOptions);
   }
 }

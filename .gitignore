@@ -42,4 +42,6 @@ testem.log
 Thumbs.db
 
 # Security
-/src/environments/*
+/src/environments/environment.ts
+/src/environments/environment.development.ts
+
