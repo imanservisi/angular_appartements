@@ -33,8 +33,8 @@ export class UpdateResidenceComponent implements OnInit {
     console.log('test');
     this.residenceService.modifierResidence(this.currentResidence).subscribe(
       (res) => {
-        const message = "Résidence " + this.currentResidence.nomResidence + " modifiée avec succès";
-        this.router.navigate(['residences'], {state: {message}});
+        // const message = "Résidence " + this.currentResidence.nomResidence + " modifiée avec succès";
+        this.router.navigate(['residences']);
       }
     );
   }
