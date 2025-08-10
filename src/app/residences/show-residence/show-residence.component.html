@@ -157,5 +157,5 @@
             <button class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="ajout ligne 229bis, 230 ou 230bis"><a href="{{ path('app_regularisation_ponctuelle_new', {residenceId: residence.id})}}">Ajouter régularisation ponctuelle</a></button>
     {% endif %} -->
     
-    <button class="ms-3 btn btn-primary" routerLink="#">Créer lot</button>
+    <button class="ms-3 btn btn-primary" [routerLink]="'/showResidence/' + residence.id + '/addLot'">Créer lot</button>
     <button class="ms-3 btn btn-secondary" routerLink="/residences">Liste résidences</button>

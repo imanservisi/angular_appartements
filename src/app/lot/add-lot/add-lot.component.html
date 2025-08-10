@@ -1,0 +1,26 @@
+<div class="container">
+    <div>
+        <h2>Ajouter un Lot :</h2>
+    </div>
+    <form>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Nom Lot</label>
+            <input type="text" [(ngModel)]="newLot.nomLot" name="nomLot"
+                class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Date achat</label>
+            <input type="date" [(ngModel)]="newLot.dateAchat" name="dateAchat"
+                class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Date vente</label>
+            <input type="date"
+                [(ngModel)]="newLot.dateVente" name="dateVente" class="form-control">
+        </div>
+    
+        <div class="mt-2">
+            <button type="submit" (click)="addLot()" class="btn btn-success">Ajouter</button>
+        </div>
+    </form>
+</div>
